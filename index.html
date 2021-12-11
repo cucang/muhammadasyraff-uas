@@ -78,22 +78,22 @@
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                             <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                            <h3>Fully Responsive</h3>
-                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                            <h3>Positif</h3>
+                            <p id="positifTxt" class="lead mb-0">Jumlah pasien positif</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                             <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                            <h3>Bootstrap 5 Ready</h3>
-                            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
+                            <h3>Sembuh</h3>
+                            <p class="lead mb-0">4,109,675</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                             <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
                             <h3>Easy to Use</h3>
-                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                            <p class="lead mb-0">OIOIOI</p>
                         </div>
                     </div>
                 </div>
@@ -244,15 +244,24 @@
 
 
         <script>
-            $.ajax('https://api.kawalcorona.com/indonesia',   // request url
-                {
-                    success: function (data, status, xhr) {// success callback function
-                        // $('p').append(data);
-                        console.log(data);
-                        alert(data)
+            // $.ajax('https://api.kawalcorona.com/indonesia',   // request url
+            //     {
+            //         success: function (data, status, xhr) {// success callback function
+            //             // $('p').append(data);
+            //             console.log(data);
+            //             alert(data)
 
-                }
-            });
+            //     }
+            // });
+            var datanya ={"name":"Indonesia","positif":"4,258,752","sembuh":"4,109,675","meninggal":"143,923","dirawat":"5,154"};
+
+            // alert(datanya['attributes']['Active']);
+            var positif = datanya.positif;
+            // alert(positif);
+            $('#positifTxt').text(positif);
+
+
+
         </script>
     </body>
 </html>
