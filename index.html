@@ -231,6 +231,7 @@
                 </div>
             </div>
         </footer>
+        <script src="js/jquery-3.6.0.js"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
@@ -240,5 +241,17 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+        <script>
+            $.ajax('https://api.kawalcorona.com/indonesia',   // request url
+                {
+                    success: function (data, status, xhr) {// success callback function
+                        // $('p').append(data);
+                        console.log(data);
+
+                }
+            });
+        </script>
     </body>
 </html>
